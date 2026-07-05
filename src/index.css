@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+html, body {
+  font-family: "Cairo", sans-serif;
+  direction: rtl;
+  text-align: right;
+  background-color: #f8fafc; /* light grey-blue background */
+  color: #1e293b; /* slate-800 */
+}
+
+/* Custom premium styles to highlight numbers, figures, and shapes */
+.highlight-val {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.025em;
+}
+
+.premium-pill {
+  background-color: rgba(239, 246, 255, 0.8);
+  border: 1.5px solid rgba(191, 219, 254, 0.5);
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.premium-pill-green {
+  background-color: rgba(236, 253, 245, 0.8);
+  border: 1.5px solid rgba(167, 243, 208, 0.5);
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.premium-pill-red {
+  background-color: rgba(254, 242, 242, 0.8);
+  border: 1.5px solid rgba(254, 202, 202, 0.5);
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.glow-card {
+  box-shadow: 0 10px 25px -15px rgba(59, 130, 246, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-width: 2px;
+}
+
+.glow-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px -20px rgba(59, 130, 246, 0.18);
+}
+
+
+/* ==========================================
+   PREMIUM DARK MODE DESIGN THEME SYSTEM
+   ========================================== */
+
+/* Root Context: Dark Selector & Color Scheme */
+html.dark {
+  color-scheme: dark;
+}
+
+/* Base Body Override */
+html.dark, 
+html.dark body {
+  background-color: #0b0f19 !important;
+  color: #f1f5f9 !important;
+}
+
+/* Background Elements Override */
+html.dark .bg-white {
+  background-color: #161f30 !important;
+}
+html.dark .bg-slate-50 {
+  background-color: #0b0f19 !important;
+}
+html.dark .bg-slate-50\/50 {
+  background-color: rgba(11, 15, 25, 0.5) !important;
+}
+html.dark .bg-slate-50\/40 {
+  background-color: rgba(11, 15, 25, 0.4) !important;
+}
+html.dark .bg-slate-100 {
+  background-color: #1f293d !important;
+}
+html.dark .bg-slate-100\/50 {
+  background-color: rgba(31, 41, 61, 0.5) !important;
+}
+html.dark .bg-slate-200 {
+  background-color: #2e3c54 !important;
+}
+
+/* Nav Bar & Header Background Fix */
+html.dark header,
+html.dark header.bg-white {
+  background-color: #111827 !important;
+  border-color: #1f293d !important;
+}
+html.dark .sticky {
+  background-color: #111827 !important;
+  border-color: #1f293d !important;
+}
+
+/* Hover States Overrides */
+html.dark .hover\:bg-slate-50:hover {
+  background-color: #1c273c !important;
+}
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #1f293d !important;
+}
+html.dark .hover\:bg-slate-50\/80:hover {
+  background-color: rgba(28, 39, 60, 0.8) !important;
+}
+
+/* Text Colors Contrast Correction */
+html.dark .text-slate-900 {
+  color: #ffffff !important;
+}
+html.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+html.dark .text-slate-700 {
+  color: #f1f5f9 !important;
+}
+html.dark .text-slate-600 {
+  color: #e2e8f0 !important;
+}
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+html.dark .text-slate-400 {
+  color: #64748b !important;
+}
+
+/* Keep standard light text bright on high-contrast backgrounds */
+html.dark .text-white {
+  color: #ffffff !important;
+}
+html.dark .text-blue-100 {
+  color: #dbeafe !important;
+}
+html.dark .text-emerald-100 {
+  color: #d1fae5 !important;
+}
+html.dark .text-amber-100 {
+  color: #fef3c7 !important;
+}
+html.dark .text-purple-100 {
+  color: #f3e8ff !important;
+}
+html.dark .text-rose-100 {
+  color: #ffe4e6 !important;
+}
+
+/* Borders and Dividers Contrast Correction */
+html.dark .border-slate-100 {
+  border-color: #1f293d !important;
+}
+html.dark .border-slate-200 {
+  border-color: #2e3c54 !important;
+}
+html.dark .border-slate-200\/60 {
+  border-color: rgba(46, 60, 84, 0.6) !important;
+}
+html.dark .border-slate-200\/80 {
+  border-color: rgba(46, 60, 84, 0.8) !important;
+}
+html.dark .divide-slate-100 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #1f293d !important;
+}
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #2e3c54 !important;
+}
+
+/* Form Elements Contrast & Usability */
+html.dark input, 
+html.dark select, 
+html.dark textarea {
+  background-color: #161f30 !important;
+  color: #f1f5f9 !important;
+  border-color: #2e3c54 !important;
+}
+html.dark input:focus, 
+html.dark select:focus, 
+html.dark textarea:focus {
+  border-color: #3b82f6 !important;
+  outline: none;
+}
+html.dark placeholder-slate-400::placeholder,
+html.dark ::placeholder {
+  color: #64748b !important;
+}
+
+/* Interactive Dropdowns & Menus */
+html.dark .shadow-xl {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* Premium Badges & Pills */
+html.dark .premium-pill {
+  background-color: rgba(30, 41, 59, 0.8) !important;
+  border-color: rgba(59, 130, 246, 0.3) !important;
+  color: #93c5fd !important;
+}
+html.dark .premium-pill-green {
+  background-color: rgba(16, 185, 129, 0.1) !important;
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  color: #6ee7b7 !important;
+}
+html.dark .premium-pill-red {
+  background-color: rgba(244, 63, 94, 0.1) !important;
+  border-color: rgba(244, 63, 94, 0.3) !important;
+  color: #fca5a5 !important;
+}
+
+/* Background Colored Accents (Muted alerts & panels) */
+html.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.12) !important;
+}
+html.dark .bg-blue-50\/70 {
+  background-color: rgba(59, 130, 246, 0.08) !important;
+}
+html.dark .bg-emerald-50 {
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+html.dark .bg-emerald-50\/20 {
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+html.dark .bg-emerald-50\/70 {
+  background-color: rgba(16, 185, 129, 0.08) !important;
+}
+html.dark .bg-rose-50 {
+  background-color: rgba(244, 63, 94, 0.12) !important;
+}
+html.dark .bg-purple-50 {
+  background-color: rgba(168, 85, 247, 0.12) !important;
+}
+html.dark .bg-purple-50\/30 {
+  background-color: rgba(168, 85, 247, 0.06) !important;
+}
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.12) !important;
+}
+
+/* Color Accents Text (Readability improvements) */
+html.dark .text-blue-700 {
+  color: #60a5fa !important;
+}
+html.dark .text-blue-800 {
+  color: #93c5fd !important;
+}
+html.dark .text-emerald-700 {
+  color: #34d399 !important;
+}
+html.dark .text-emerald-800 {
+  color: #6ee7b7 !important;
+}
+html.dark .text-rose-600 {
+  color: #fb7185 !important;
+}
+html.dark .text-rose-700 {
+  color: #fca5a5 !important;
+}
+html.dark .text-purple-700 {
+  color: #c084fc !important;
+}
+html.dark .text-purple-800 {
+  color: #e9d5ff !important;
+}
+
+/* Cards Hover Shadows */
+html.dark .glow-card {
+  box-shadow: 0 10px 25px -15px rgba(0, 0, 0, 0.4);
+}
+html.dark .glow-card:hover {
+  box-shadow: 0 20px 35px -20px rgba(59, 130, 246, 0.3);
+}
+
+/* SVG Circle Background Fix */
+html.dark .text-slate-100 {
+  color: #1f293d !important;
+}
+
+/* Thick dark borders for all input, select and textarea fields */
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), 
+select, 
+textarea {
+  border: 2px solid #334155 !important; /* Slate-700 (Dark and bold) */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out !important;
+}
+
+input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):focus, 
+select:focus, 
+textarea:focus {
+  border-color: #2563eb !important; /* Blue-600 */
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15) !important;
+}
+
+/* Dark mode support for input fields */
+html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]), 
+html.dark select, 
+html.dark textarea {
+  border-color: #64748b !important; /* Slate-500 (Thicker and brighter for visibility in dark mode) */
+  background-color: #161f30 !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):focus, 
+html.dark select:focus, 
+html.dark textarea:focus {
+  border-color: #3b82f6 !important; /* Blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25) !important;
+}
+
+

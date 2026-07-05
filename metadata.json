@@ -1,0 +1,6 @@
+{
+  "name": "حسابات العداد المشترك",
+  "description": "تطبيق لحساب تكلفة استهلاك العداد الرئيسي للكهرباء وتوزيع المبالغ بالتساوي على المشتركين مع ترحيل ومتابعة الديون والمدفوعات لكل مشترك.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
